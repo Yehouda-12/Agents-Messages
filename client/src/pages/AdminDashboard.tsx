@@ -8,7 +8,7 @@ const AdminDashboard = () => {
   return (
     <div className='admin-container'>
       <h1>Admin space</h1>
-      <p>Welcome, <strong>{user?.fullName}</strong> (Code: {user?.agentCode})</p>
+      <p>Welcome, <strong>{user?.fullName}</strong> </p>
        <div className='btn-admin'>
         <button onClick={() => navigate('/users')}>Agents</button>
          <button onClick={() => navigate('/all-reports')}>Reports</button>
