@@ -7,7 +7,7 @@ const api = axios.create({
 
 api.interceptors.request.use((config) => {
     const data = localStorage.getItem('auth-storage');
-    console.log('raw localStorage:', data); 
+    // console.log('localStorage:', data); 
   
   if (data) {
     const parsed = JSON.parse(data);

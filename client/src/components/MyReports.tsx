@@ -7,7 +7,7 @@ const MyReports = () => {
   const { reports, fetchReports, loading, user } = useAuthStore();
 
   useEffect(() => {
-    fetchReports({ userId: user?.id });
+    fetchReports({ userId: user?._id });
   }, []);
 
   return (

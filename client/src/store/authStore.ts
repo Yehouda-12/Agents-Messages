@@ -3,7 +3,7 @@ import { persist, createJSONStorage } from 'zustand/middleware';
 import api from '../api/axiosConfig';
 
 interface User {
-    id: string;
+    _id: string;
     agentCode: string;
     fullName: string;
     role: 'admin' | 'agent';

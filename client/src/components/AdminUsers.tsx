@@ -27,6 +27,7 @@ const AdminUsers = () => {
 
   useEffect(() => {
     fetchAllUsers();
+   
   }, []);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
@@ -102,20 +103,24 @@ const AdminUsers = () => {
       {!loading && users.length === 0 && <p>No agents found.</p>}
 
       {!loading && users.length > 0 && (
-        <table border={1} cellPadding={8}>
+        <table className='reports-table'>
           <thead>
             <tr>
               <th>Full Name</th>
               <th>Agent Code</th>
               <th>Role</th>
+              <th>Agent ID</th>
+              
+
             </tr>
           </thead>
           <tbody>
             {users.map((agent) => (
-              <tr key={agent.id}>
+              <tr key={agent._id}>
                 <td>{agent.fullName}</td>
                 <td>{agent.agentCode}</td>
                 <td>{agent.role}</td>
+                <td>{agent._id}</td>
               </tr>
             ))}
           </tbody>
