@@ -4,16 +4,16 @@ import type { Report } from '../store/authStore';
 
 
 const MyReports = () => {
-  const { reports, fetchReports, loading,user } = useAuthStore();
+  const { reports, fetchReports, loading, user } = useAuthStore();
 
   useEffect(() => {
-    fetchReports({userId: user?.id});
+    fetchReports({ userId: user?.id });
   }, []);
 
   return (
     <div className="my-reports-page">
       <h2>My Reports</h2>
-      
+
       {loading ? (
         <p>Loading reports...</p>
       ) : (
