@@ -12,6 +12,7 @@ import CsvReport from './components/CsvReport';
 import AdminUsers from './components/AdminUsers';
 import AdminReports from './components/AdminReports';
 import './App.css'
+import NotAdmin from './components/NotAdmin';
 
 
 const PrivateRoute = ({ children }) => {
@@ -23,7 +24,7 @@ const PrivateRoute = ({ children }) => {
 const AdminRoute = ({ children }) => {
   const user = useAuthStore((state) => state.user);
   if (!user) return <Navigate to="/login" />;
-  if (user.role !== 'admin') return <Navigate to="/dashboard-agent" />;
+  if (user.role !== 'admin') return <NotAdmin />;;
   return children;
 };
 
