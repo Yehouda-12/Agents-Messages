@@ -26,6 +26,7 @@ const MyReports = () => {
               <th>Message</th>
               <th>Source</th>
               <th>Date</th>
+              <th>Image Path</th>
             </tr>
           </thead>
           <tbody>
@@ -46,7 +47,7 @@ const MyReports = () => {
                 <td>
                   <span>{report.sourceType || 'FORM'}</span>
                 </td>
-                <td className="text-muted">
+                <td >
                   {new Date(report.createdAt).toLocaleString('en-US', {
                     year: 'numeric',
                     month: 'numeric',
@@ -55,6 +56,9 @@ const MyReports = () => {
                     minute: '2-digit',
                     second: '2-digit'
                   })}
+                </td>
+                <td>
+                  <span>{report.imagePath || "NO IMAGE"}</span>
                 </td>
               </tr>
             ))}

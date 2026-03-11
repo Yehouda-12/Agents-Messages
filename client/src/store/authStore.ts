@@ -18,6 +18,7 @@ export interface Report {
     category?: string;
     urgency?: string;
     sourceType?: string
+    imagePath?:string
 }
 
 interface AuthState {
