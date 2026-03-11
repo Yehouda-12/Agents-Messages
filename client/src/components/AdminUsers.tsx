@@ -73,11 +73,11 @@ const AdminUsers = () => {
           <h3>Create Agent</h3>
           <div>
             <label>Full Name *</label><br />
-            <input name="fullName" value={form.fullName} onChange={handleChange} placeholder="Jean Dupont" />
+            <input name="fullName" value={form.fullName} onChange={handleChange}  />
           </div>
           <div>
             <label>Agent Code *</label><br />
-            <input name="agentCode" value={form.agentCode} onChange={handleChange} placeholder="AGT-042" />
+            <input name="agentCode" value={form.agentCode} onChange={handleChange}  />
           </div>
           <div>
             <label>Password (optional)</label><br />
