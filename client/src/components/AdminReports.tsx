@@ -86,7 +86,7 @@ const AdminReports = () => {
                                 <th>Urgency</th>
                                 <th>Message</th>
                                 <th>Date</th>
-                                <th>ID</th>
+
                             </tr>
                         </thead>
                         <tbody>
