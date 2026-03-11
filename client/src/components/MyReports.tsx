@@ -33,18 +33,18 @@ const MyReports = () => {
               <tr key={report._id}>
                 <td >{report._id}</td>
                 <td>
-                  <span className={`badge cat-${report.category?.toLowerCase() || 'logistics'}`}>
+                  <span >
                     {report.category || 'LOGISTICS'}
                   </span>
                 </td>
                 <td>
-                  <span className={`badge urg-${report.urgency?.toLowerCase() || 'medium'}`}>
+                  <span >
                     {report.urgency || 'MEDIUM'}
                   </span>
                 </td>
                 <td>{report.message}</td>
                 <td>
-                  <span className="source-tag">{report.source || 'FORM'}</span>
+                  <span>{report.sourceType || 'FORM'}</span>
                 </td>
                 <td className="text-muted">
                   {new Date(report.createdAt).toLocaleString('en-US', {

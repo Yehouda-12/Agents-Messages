@@ -17,7 +17,7 @@ export interface Report {
 
     category?: string;
     urgency?: string;
-    source?: string
+    sourceType?: string
 }
 
 interface AuthState {
