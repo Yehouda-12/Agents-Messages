@@ -65,7 +65,7 @@ const LoginPage : React.FC = ()=>{
                     </div>
 
                     <button type="submit" className="login-btn" disabled={loading}>
-                        {loading ? 'Vérification...' : 'Login'}
+                        {loading ? 'Verification...' : 'Login'}
                     </button>
                 </form>
             </div>
