@@ -2,7 +2,7 @@ import { create } from 'zustand';
 import { persist, createJSONStorage } from 'zustand/middleware';
 import api from '../api/axiosConfig';
 
-interface User {
+export interface User {
     _id: string;
     agentCode: string;
     fullName: string;
@@ -21,7 +21,7 @@ export interface Report {
     imagePath?:string
 }
 
-interface AuthState {
+export interface AuthState {
     user: User | null;
     token: string | null;
     isAuthenticated: boolean;
